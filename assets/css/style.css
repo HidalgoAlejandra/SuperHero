@@ -1,0 +1,9 @@
+nav, footer {
+    background: #353942 0% 0% no-repeat padding-box;
+}
+#encontrar{
+    max-width: 540px;
+}
+#mostrar_heroe{
+    display:none;
+}
