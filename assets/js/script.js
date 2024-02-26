@@ -68,35 +68,13 @@ $(document).ready(function () {
             };
 
             // comprobamos que no sean nulo los valores de x axis - y axis del grafico
-            if (response.powerstats.intelligence != "null") {
-              dataPoints.push({
-                name: "intelligence",
-                y: response.powerstats.intelligence,
-              });
-            }
-            if (response.powerstats.strength != "null") {
-              dataPoints.push({
-                name: "strength",
-                y: response.powerstats.strength,
-              });
-            }
-            if (response.powerstats.speed != "null") {
-              dataPoints.push({ name: "speed", y: response.powerstats.speed });
-            }
-            if (response.powerstats.durability != "null") {
-              dataPoints.push({
-                name: "durability",
-                y: response.powerstats.durability,
-              });
-            }
-            if (response.powerstats.power != "null") {
-              dataPoints.push({ name: "power", y: response.powerstats.power });
-            }
-            if (response.powerstats.combat != "null") {
-              dataPoints.push({
-                name: "combat",
-                y: response.powerstats.combat,
-              });
+            for (const key in response.powerstats) {
+              if (response.powerstats[key] != "null") {
+                dataPoints.push({
+                  name: key, // esta seria la propiedad
+                  y: response.powerstats[key], // esta seria el value
+                });
+              }
             }
             //mostramos informacion de heroe
             $("#mostrar_heroe").show(); //datos
