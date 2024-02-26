@@ -18,7 +18,7 @@ $(document).ready(function () {
     $("#chartContainer").html("");
   }
 
-  $("button").on("click", function () {
+  $("#btn_heroe").on("click", function () {
     let num_heroe = $("#heroe").val(); //recibimos el numero del heroe a buscar
     let validacion = validar(num_heroe); //validamos que sea numero
     if (validacion == true) {
