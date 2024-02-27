@@ -72,7 +72,7 @@ $(document).ready(function () {
               if (response.powerstats[key] != "null") {
                 dataPoints.push({
                   name: key, // esta seria la propiedad
-                  y: response.powerstats[key], // esta seria el value
+                  y: Number(response.powerstats[key]), // esta seria el value
                 });
               }
             }
